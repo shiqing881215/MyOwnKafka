@@ -1,0 +1,12 @@
+# This is the IP addresses of Kafka cluster
+bootstrap.servers=localhost:9092
+acks=all
+retries=0
+batch.size=16384
+auto.commit.interval.ms=1000
+linger.ms=0
+# Kafka message sent to Kafka cluster is combined with key(optional) and value which can be any data type. 
+# However, we will need to specify how Kafka producer should serialize those data types into binary before sending to Kafka cluster.
+key.serializer=org.apache.kafka.common.serialization.StringSerializer
+value.serializer=org.apache.kafka.common.serialization.StringSerializer
+block.on.buffer.full=true
